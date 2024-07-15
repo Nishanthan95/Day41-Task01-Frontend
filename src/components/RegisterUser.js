@@ -15,7 +15,7 @@ const RegisterUser = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/users/register', { email, password, userName });
+            const response = await axios.post('https://day41-task01-backend.onrender.com/api/users/register', { email, password, userName });
             toast.success('Register successfully');
             setTimeout(() => {
                 navigate('/login');

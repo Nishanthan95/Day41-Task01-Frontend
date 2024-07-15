@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/users/forgot-password', { email });
+            const response = await axios.post('https://day41-task01-backend.onrender.com/api/users/forgot-password', { email });
             toast.success('Password reset link sent');
         } catch (error) {
             toast.error('Failed to send password reset link: ' + error.response.data.message);

@@ -19,7 +19,7 @@ const ResetPassword = () => {
             return;
         }
         try {
-            const response = await axios.post(`http://localhost:5000/api/users/reset-password/${token}`, { password });
+            const response = await axios.post(`https://day41-task01-backend.onrender.com/api/users/reset-password/${token}`, { password });
             toast.success('Password reset successful');
             setTimeout(() => {
                 navigate('/login');
